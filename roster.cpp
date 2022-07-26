@@ -4,7 +4,7 @@
 //Create Roster Constructor
 Roster::Roster() {}
 
-//Create Roster Destructor
+//Create Roster Destructor by pulling each object out of the array and making them null
 Roster::~Roster() {
 	for (int i = 0; i <= last; i++) {
 		delete classRosterArray[i];
@@ -20,9 +20,12 @@ Student* Roster::getStudent(int i) {
 
 //Create parse function
 void Roster::parse(string row) {
-	DegreeProgram degree = DegreeProgram::NETWORK; //default and check to see if degree ends with y or e for the degreeprogram
+	DegreeProgram degree = DegreeProgram::NETWORK; //default value and check to see if degree ends with y or e for the degreeprogram
 	if (row.back() == 'Y') degree = DegreeProgram::SECURITY;
 	else  if (row.back() == 'E') degree = DegreeProgram::SOFTWARE;
+	/* parsing through the row works by assinging a left hand side character (lhs) index of the comma and the right hand side (rhs) of the comma starting at 0.
+	The lhs and rhs loop through the commas extracting what is in-between and assigning each value in the parsed array for that row of data.
+	*/
 	string parsed[9];
 	int rhs = 0;
 	int lhs = 0;
