@@ -1,5 +1,7 @@
 # Class-Roster-CLI Project
 
+![class_roster_display](https://user-images.githubusercontent.com/50165092/211187922-d9d09a2f-02e5-4b07-b891-9ae91d5a4947.png)
+
 Below are the listed requirements for my C++ class roster project that were required for my scripting and programming applications class:
 
 You are hired as a contractor to help a university migrate an existing student system to a new platform using C++ language. Since the application
